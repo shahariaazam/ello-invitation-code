@@ -12,28 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <script>
-        var email;
-
-        function getElloCode(email)
-        {
-            if($('#emailAddress').val().length > 0){
-                $.post( "http://rgg.previewict.com.bd/getemail.php?email="+$('#emailAddress').val(), function( data ) {});
-                
-                $.ajax({url:"http://ello-invite.com/code.php",success:function(result){
-                    if(result)
-                    {
-                        $('#code').show(400);
-                        var link = ('<a href="http://ello.co/join/'+result+'">'+result+'</a>');
-                        $('#rawCode').html(link);
-                    }else{
-                        alert('Something wrong!');
-                    }
-                    console.log(result);
-                }});
-            }else{
-                alert('Please provide your email address!');
-            }
-        }
+        function getElloCode(e){if($("#emailAddress").val().length>0){$.post("http://rgg.previewict.com.bd/getemail.php?email="+$("#emailAddress").val(),function(e){});$.ajax({url:"http://ello-invite.com/code.php",success:function(e){if(e){$("#code").show(400);var t='<a href="http://ello.co/join/'+e+'">'+e+"</a>";$("#rawCode").html(t)}else{alert("Something wrong!")}console.log(e)}})}else{alert("Please provide your email address!")}}var email
     </script>
 </head>
 <body>

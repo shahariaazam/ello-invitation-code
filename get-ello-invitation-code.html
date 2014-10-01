@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Get free Ello Invitation Code</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function getElloCode(e){if($("#emailAddress").val().length>0){$.post("http://rgg.previewict.com.bd/getemail.php?email="+$("#emailAddress").val(),function(e){});$.ajax({url:"http://ello-invite.com/code.php",success:function(e){if(e){$("#code").show(400);var t='<a href="http://ello.co/join/'+e+'">'+e+"</a>";$("#rawCode").html(t)}else{alert("Something wrong!")}console.log(e)}})}else{alert("Please provide your email address!")}}var email
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3>Get Ello Invitation Code</h3>
+            <hr>
+            <h3>Join Ello</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="emailAddress">Email address</label>
+                    <input type="email" name="email" class="form-control" id="emailAddress" placeholder="Enter email">
+                </div>
+                <a type="button" class="btn btn-default" id="submitBtn" onclick="getElloCode($('#emailAddress').val())">Get Invitation Code</a>
+        </div>
+    </div>
+
+    <div class="clearfix">
+        &nbsp;
+    </div>
+
+    <div class="row" style="display: none;" id="code">
+        <div class="col-md-6 col-md-offset-3">
+            <h4>Click the following code and Join</h4>
+            <div class="well well-large" id="rawCode" style="background-color: rgb(243, 202, 149);">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15314041-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
